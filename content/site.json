@@ -1,0 +1,104 @@
+{
+  "title": "Visual Freedom Foundation",
+  "description": "",
+  "url": "https://visual-freedom.org",
+  "pages": [
+    {
+      "title": "Sample Page",
+      "slug": "sample-page"
+    },
+    {
+      "title": "Global Styles",
+      "slug": "global-styles"
+    },
+    {
+      "title": "Home",
+      "slug": "home"
+    },
+    {
+      "title": "About",
+      "slug": "about-us"
+    },
+    {
+      "title": "Services",
+      "slug": "services"
+    },
+    {
+      "title": "Key Pillars",
+      "slug": "key-pillars"
+    },
+    {
+      "title": "Contact Us",
+      "slug": "contact-us"
+    },
+    {
+      "title": "Login",
+      "slug": "login"
+    },
+    {
+      "title": "Partners and Community",
+      "slug": "partners-and-community"
+    },
+    {
+      "title": "patients",
+      "slug": "patients"
+    },
+    {
+      "title": "My Account",
+      "slug": "my-account"
+    },
+    {
+      "title": "Login",
+      "slug": "login-2"
+    },
+    {
+      "title": "Lost Password",
+      "slug": "lost-password"
+    },
+    {
+      "title": "Registration",
+      "slug": "registration"
+    },
+    {
+      "title": "register",
+      "slug": "register"
+    }
+  ],
+  "posts": [
+    {
+      "title": "Hello world!",
+      "slug": "hello-world",
+      "date": "2024-10-09 19:11:28"
+    },
+    {
+      "title": "Blog Post Title",
+      "slug": "blog-post-title-1",
+      "date": "2024-10-09 21:22:02"
+    },
+    {
+      "title": "Blog Post Title",
+      "slug": "blog-post-title-2",
+      "date": "2024-10-09 21:22:02"
+    },
+    {
+      "title": "Blog Post Title",
+      "slug": "blog-post-title-3",
+      "date": "2024-10-09 21:22:03"
+    },
+    {
+      "title": "Blog Post Title",
+      "slug": "blog-post-title-4",
+      "date": "2024-10-09 21:22:03"
+    },
+    {
+      "title": "Blog Post Title",
+      "slug": "blog-post-title-5",
+      "date": "2024-10-09 21:22:03"
+    },
+    {
+      "title": "Blog Post Title",
+      "slug": "blog-post-title-6",
+      "date": "2024-10-09 21:22:03"
+    }
+  ]
+}
