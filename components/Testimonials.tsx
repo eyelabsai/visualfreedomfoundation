@@ -5,22 +5,22 @@ const testimonials = [
   {
     content: "Focus on Independence gave me the gift of Lasik which has given me the freedom to do more with my life now over a decade later.",
     name: "Jessica Cox",
-    image: "https://visual-freedom.org/wp-content/uploads/2024/10/Jessica-Cox-Headshot-2-scaled.jpg"
+    image: "/images/testimonials/jessica-cox-headshot.jpg"
   },
   {
     content: "A testimonial from a patient who benefited from the VFF charity services. Testimonials can be a highly effective way of establishing credibility and increasing the organization's reputation.",
     name: "Patient Name",
-    image: "https://visual-freedom.org/wp-content/uploads/2024/10/testiminials-pic-light.jpg"
+    image: "/images/testimonials/placeholder-patient.jpg"
   },
   {
     content: "A testimonial from a patient who benefited from the VFF charity services. Testimonials can be a highly effective way of establishing credibility and increasing the organization's reputation.",
     name: "Patient Name",
-    image: "https://visual-freedom.org/wp-content/uploads/2024/10/testiminials-pic-light.jpg"
+    image: "/images/testimonials/placeholder-patient.jpg"
   },
   {
     content: "A testimonial from a patient who benefited from the VFF charity services. Testimonials can be a highly effective way of establishing credibility and increasing the organization's reputation.",
     name: "Patient Name",
-    image: "https://visual-freedom.org/wp-content/uploads/2024/10/testiminials-pic-light.jpg"
+    image: "/images/testimonials/placeholder-patient.jpg"
   }
 ]
 

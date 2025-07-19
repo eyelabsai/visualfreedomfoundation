@@ -33,3 +33,4 @@ Thumbs.db
 >>>>>>> 8b054564d3b7c1fac07877aace098275e44c4e1b
 dist/
 build/
+.vercel

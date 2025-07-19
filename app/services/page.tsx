@@ -7,27 +7,27 @@ export default function ServicesPage() {
     {
       title: "Refractive Surgery Programs",
       description: "We provide comprehensive refractive surgery programs for disadvantaged populations worldwide, helping people regain their sight and independence.",
-      image: "https://visual-freedom.org/wp-content/uploads/2024/10/service-img.jpg"
+      image: "/images/services/service-placeholder.jpg"
     },
     {
       title: "Medical Professional Network",
       description: "Building a global network of medical professionals, volunteers, and partner organizations to bring cutting-edge surgical interventions to communities with limited access to eye care.",
-      image: "https://visual-freedom.org/wp-content/uploads/2024/10/service-img.jpg"
+      image: "/images/services/service-placeholder.jpg"
     },
     {
       title: "Community Outreach",
       description: "Reaching out to communities worldwide that have limited access to life-changing refractive surgeries and treatments, ensuring everyone can experience the freedom that comes with clear vision.",
-      image: "https://visual-freedom.org/wp-content/uploads/2024/10/service-img.jpg"
+      image: "/images/services/service-placeholder.jpg"
     },
     {
       title: "Surgeon Partnership Program",
       description: "Welcoming refractive surgeons worldwide to join our mission in combating the leading causes of preventable blindness through innovative surgical programs.",
-      image: "https://visual-freedom.org/wp-content/uploads/2024/10/service-img.jpg"
+      image: "/images/services/service-placeholder.jpg"
     },
     {
       title: "Patient Support Services",
       description: "Providing comprehensive support services to ensure patients receive the best possible care before, during, and after their vision correction procedures.",
-      image: "https://visual-freedom.org/wp-content/uploads/2024/10/service-img.jpg"
+      image: "/images/services/service-placeholder.jpg"
     }
   ]
 

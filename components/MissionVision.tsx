@@ -37,7 +37,7 @@ export default function MissionVision() {
           <div className="flex justify-center">
             <div className="w-full max-w-lg">
               <img
-                src="https://visual-freedom.org/wp-content/uploads/2024/10/0322_CF11_Fig.png"
+                src="/images/content/vision-correction-illustration.png"
                 alt="Vision Correction"
                 className="w-full h-auto rounded-lg shadow-lg"
               />

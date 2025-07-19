@@ -9,7 +9,7 @@ export default function Hero() {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('https://visual-freedom.org/wp-content/uploads/2025/02/VFF-Banner-blank-scaled.jpg')",
+          backgroundImage: "url('/images/banners/hero-banner.jpg')",
           backgroundPosition: 'center center'
         }}
       />

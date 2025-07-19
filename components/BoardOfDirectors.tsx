@@ -6,7 +6,7 @@ const boardMembers = [
     title: "Board Chairman",
     organization: "Parkhurst NuVision",
     location: "San Antonio, TX, USA",
-    image: "https://visual-freedom.org/wp-content/uploads/2024/10/parkhurst-1.jpg",
+    image: "/images/board-members/greg-parkhurst.jpg",
     link: "https://sanantonio-lasik.com/our-doctors/dr-greg-parkhurst/"
   },
   {
@@ -14,7 +14,7 @@ const boardMembers = [
     title: "Board Member",
     organization: "Jessica Cox Motivational Services",
     location: "Tucson, AZ, USA",
-    image: "https://visual-freedom.org/wp-content/uploads/2024/10/jessicacox-e1730133433154.jpg",
+    image: "/images/board-members/jessica-cox.jpg",
     link: "https://jessicacox.com/about/"
   },
   {
@@ -22,7 +22,7 @@ const boardMembers = [
     title: "Board Member",
     organization: "iOR Partners",
     location: "Kansas City, MO, USA",
-    image: "https://visual-freedom.org/wp-content/uploads/2024/10/Durrie-iOR.jpg",
+    image: "/images/board-members/dan-durrie.jpg",
     link: "https://durrievision.com/a-note-from-dr-durrie/"
   },
   {
@@ -30,7 +30,7 @@ const boardMembers = [
     title: "Board Member",
     organization: "Alexandria University",
     location: "Cairo, Egypt",
-    image: "https://visual-freedom.org/wp-content/uploads/2024/10/osama-min-e1728520134638.jpg",
+    image: "/images/board-members/osama-ibrahim.jpg",
     link: "https://wcrsvs.org/team/osama-ibrahim/"
   },
   {
@@ -38,7 +38,7 @@ const boardMembers = [
     title: "Board Member",
     organization: "Institute Zaldivar",
     location: "Mendoza, Argentina",
-    image: "https://visual-freedom.org/wp-content/uploads/2024/10/FOTO-NUEVA-ROGER-904x1024-1-e1728520221317.jpeg",
+    image: "/images/board-members/roger-zaldivar.jpg",
     link: "https://wcrsvs.org/team/roger-zaldivar/"
   },
   {
@@ -46,7 +46,7 @@ const boardMembers = [
     title: "Board Member",
     organization: "Tylock-George",
     location: "Dallas, TX, USA",
-    image: "https://visual-freedom.org/wp-content/uploads/2024/10/dr_taj_nasser-e1730133778124.jpg",
+    image: "/images/board-members/taj-nasser.jpg",
     link: "https://www.tylock.com/eye-doctors-irving/taj-nasser-m-d/"
   }
 ]
