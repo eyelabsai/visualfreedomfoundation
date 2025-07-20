@@ -7,12 +7,12 @@ export default function ServicesPage() {
     {
       title: "Refractive Surgery Programs",
       description: "We provide comprehensive refractive surgery programs for disadvantaged populations worldwide, helping people regain their sight and independence.",
-      image: "/images/services/service-placeholder.jpg"
+      image: "/images/partners/wcr-logo.webp"
     },
     {
       title: "Medical Professional Network",
       description: "Building a global network of medical professionals, volunteers, and partner organizations to bring cutting-edge surgical interventions to communities with limited access to eye care.",
-      image: "/images/services/service-placeholder.jpg"
+      image: "/images/content/medicalprofessionalnetwork.png"
     },
     {
       title: "Community Outreach",
@@ -69,7 +69,9 @@ export default function ServicesPage() {
                     <img
                       src={service.image}
                       alt={service.title}
-                      className="w-full h-auto rounded-lg shadow-lg"
+                      className={`w-full h-auto rounded-lg shadow-lg ${
+                        service.title === "Refractive Surgery Programs" ? "max-w-xs mx-auto" : ""
+                      }`}
                     />
                   </div>
                 </div>

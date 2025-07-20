@@ -48,6 +48,14 @@ const boardMembers = [
     location: "Dallas, TX, USA",
     image: "/images/board-members/taj-nasser.jpg",
     link: "https://www.tylock.com/eye-doctors-irving/taj-nasser-m-d/"
+  },
+  {
+    name: "Ashiyana Nariani, MD",
+    title: "Board Member",
+    organization: "HCP Cure Blindness",
+    location: "Mumbai, India",
+    image: "/images/board-members/AshiyanaNariani.jpg",
+    link: "https://cureblindness.org/who-we-are/dr-ashiyana-nariani"
   }
 ]
 
