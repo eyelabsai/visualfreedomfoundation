@@ -19,7 +19,7 @@ export default function MissionVision() {
             <div className="w-full max-w-lg">
               <div className="aspect-video bg-gray-200 rounded-lg overflow-hidden">
                 <iframe
-                  src="https://player.vimeo.com/video/1077604030?h=8f7685f17a&dnt=1&app_id=122963"
+                  src="https://player.vimeo.com/video/1077604030?h=8f7685f17a&dnt=1&app_id=122963&title=0&byline=0&portrait=0&controls=1&autopause=0"
                   width="100%"
                   height="100%"
                   frameBorder="0"
