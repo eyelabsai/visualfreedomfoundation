@@ -50,10 +50,10 @@ const boardMembers = [
     link: "https://www.tylock.com/eye-doctors-irving/taj-nasser-m-d/"
   },
   {
-    name: "Ashiyana Nariani, MD",
+    name: "Ashiyana Nariani, MD, MPH, PCEO",
     title: "Board Member",
-    organization: "HCP Cure Blindness",
-    location: "Mumbai, India",
+    organization: "Jehangir Hospital",
+    location: "Pune, India",
     image: "/images/board-members/AshiyanaNariani.jpg",
     link: "https://cureblindness.org/who-we-are/dr-ashiyana-nariani"
   }
