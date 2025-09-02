@@ -1,9 +1,7 @@
 import Header from '@/components/Header'
 import Hero from '@/components/Hero'
-import MissionVision from '@/components/MissionVision'
-import Testimonials from '@/components/Testimonials'
-import BoardOfDirectors from '@/components/BoardOfDirectors'
-import Statistics from '@/components/Statistics'
+import OurDream from '@/components/OurDream'
+import FoundationPillars from '@/components/FoundationPillars'
 import Footer from '@/components/Footer'
 
 export default function Home() {
@@ -11,10 +9,8 @@ export default function Home() {
     <main className="min-h-screen">
       <Header />
       <Hero />
-      <MissionVision />
-      <Testimonials />
-      <BoardOfDirectors />
-      <Statistics />
+      <OurDream />
+      <FoundationPillars />
       <Footer />
     </main>
   )

@@ -1,0 +1,46 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Users collection - users can read/write their own data
+    match /users/{userId} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+      
+      // Allow admins to read user data for admin functions
+      allow read: if request.auth != null && 
+        request.auth.token.email in [
+          'gurpalvirdi@gmail.com',
+          'admin@visualfreedomfoundation.org',
+          'info@visualfreedomfoundation.org'
+        ];
+      
+      // Allow public reading of surgeon profiles for the map
+      // Only if the user has role 'surgeon' and accountStatus 'active'
+      allow read: if resource.data.role == 'surgeon' && 
+                     resource.data.accountStatus == 'active';
+    }
+    
+    // Patients collection - surgeons can manage their own patient records
+    match /patients/{patientId} {
+      // Allow surgeons to create, read, update, delete their own patient records
+      allow read, write: if request.auth != null && 
+        resource.data.surgeonId == request.auth.uid;
+      
+      // Allow creating new patient records if the surgeonId matches the authenticated user
+      allow create: if request.auth != null && 
+        request.resource.data.surgeonId == request.auth.uid;
+      
+      // Allow reading all patient records for admin users
+      allow read: if request.auth != null && 
+        request.auth.token.email in [
+          'gurpalvirdi@gmail.com',
+          'admin@visualfreedomfoundation.org',
+          'info@visualfreedomfoundation.org'
+        ];
+    }
+    
+    // Default deny all other operations
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

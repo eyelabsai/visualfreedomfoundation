@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[305px] bg-gradient-to-r from-primary-600 to-primary-700">
+    <section className="relative h-[70vh] flex items-center">
       {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -15,45 +15,137 @@ export default function Hero() {
       />
       
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black bg-opacity-40" />
+      <div className="absolute inset-0 bg-black bg-opacity-30" />
       
-      <div className="container-custom relative z-10">
-        <div className="flex items-center min-h-[305px]">
-          <div className="w-full md:w-1/2 p-4">
-            <div className="bg-white bg-opacity-90 rounded-lg p-6 md:p-8">
-              <div className="text-center mb-4">
-                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-4 capitalize leading-tight">
-                  Imagine having to put your contacts in like this
-                </h1>
+      <div className="relative z-10 flex items-center h-full">
+        <div className="flex w-full items-center">
+          {/* Left side - Join VFF sidebar */}
+          <div className="hidden lg:flex lg:w-1/2 justify-start">
+            <div className="bg-white bg-opacity-95 backdrop-blur-sm rounded-lg p-6 w-96 shadow-xl ml-4">
+              <h3 className="text-2xl font-bold text-[#33848C] mb-4">Join VFF</h3>
+              <p className="text-gray-700 mb-6 text-sm">
+                Restoring sight through refractive surgery for underserved communities around the world.
+              </p>
+              
+              <div className="space-y-3 mb-6">
+                <a 
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSfOdwDOD397b64vCNtmbR6iAuQiqC1yYLnca1YIZdnIUyU4wg/viewform?usp=sharing&ouid=101040064194418031486"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full bg-[#33848C] text-white py-3 px-4 rounded text-sm font-medium hover:bg-[#2a6b72] transition-colors block text-center"
+                >
+                  Become a Volunteer Ophthalmologist
+                </a>
+                <button className="w-full bg-gray-200 text-gray-800 py-3 px-4 rounded text-sm font-medium hover:bg-gray-300 transition-colors">
+                  Become An Optometry Ambassador
+                </button>
+                <button className="w-full bg-gray-200 text-gray-800 py-3 px-4 rounded text-sm font-medium hover:bg-gray-300 transition-colors">
+                  Patient Application for Free Surgery
+                </button>
+                <button className="w-full bg-[#33848C] text-white py-4 px-4 rounded text-lg font-bold hover:bg-[#2a6b72] transition-colors">
+                  DONATE NOW
+                </button>
+                <p className="text-center text-sm text-gray-600">$250 = 1 Surgery</p>
               </div>
               
-              <div className="bg-white bg-opacity-90 rounded-lg p-4 md:p-6">
-                <p className="text-lg md:text-xl text-[#324A6D] font-light text-center leading-relaxed mb-6">
-                  "laser vision correction gave me the freedom to do more with my life"
-                </p>
-                
-                {/* Action Buttons */}
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <a 
-                    href="https://docs.google.com/forms/d/e/1FAIpQLSfOdwDOD397b64vCNtmbR6iAuQiqC1yYLnca1YIZdnIUyU4wg/viewform?usp=sharing&ouid=101040064194418031486" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="bg-[#33848C] hover:bg-[#2a6b72] text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300 text-center"
-                  >
-                    Join Now - Physician Enrollment
-                  </a>
-                  <a 
-                    href="https://docs.google.com/forms/d/18g4tMYwF7ZD_XTPlRI58JjW1DLtTognrel1q-rTbfAs/edit?ts=68004b0d" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="bg-white hover:bg-gray-100 text-[#33848C] font-bold py-3 px-6 rounded-lg border-2 border-[#33848C] transition-colors duration-300 text-center"
-                  >
-                    Patient Reporting Form
-                  </a>
-                </div>
+              <div className="grid grid-cols-2 gap-3">
+                <a 
+                  href="https://docs.google.com/forms/d/18g4tMYwF7ZD_XTPlRI58JjW1DLtTognrel1q-rTbfAs/preview?edit_requested=true"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-gray-100 p-3 rounded text-center hover:bg-gray-200 transition-colors"
+                >
+                  <p className="font-semibold text-sm text-gray-800">For Ophthalmologists</p>
+                  <p className="text-xs text-gray-600 mt-1">Enter Patient Details</p>
+                </a>
+                <a 
+                  href="https://docs.google.com/forms/d/18g4tMYwF7ZD_XTPlRI58JjW1DLtTognrel1q-rTbfAs/preview?edit_requested=true"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-gray-100 p-3 rounded text-center hover:bg-gray-200 transition-colors"
+                >
+                  <p className="font-semibold text-sm text-gray-800">For Optometrists</p>
+                  <p className="text-xs text-gray-600 mt-1">Enter Patient Details</p>
+                </a>
               </div>
             </div>
           </div>
+          
+          {/* Right side - Emilio story */}
+          <div className="w-full lg:w-1/2 flex items-center justify-center">
+            <div className="text-white max-w-2xl text-center">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4">
+                Emilio always wanted to fly.
+              </h1>
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-8">
+                Thanks to you, now he can.
+              </h2>
+              <button className="border-2 border-white text-white px-8 py-3 text-lg font-medium hover:bg-white hover:text-black transition-all duration-300">
+                Tell Me More
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      {/* Mobile Join VFF section */}
+      <div className="lg:hidden absolute bottom-0 left-0 right-0 p-4">
+        <div className="bg-white bg-opacity-95 backdrop-blur-sm rounded-lg p-6 shadow-xl">
+          <h3 className="text-2xl font-bold text-[#33848C] mb-4">Join VFF</h3>
+          <p className="text-gray-700 mb-6 text-sm">
+            Restoring sight through refractive surgery for underserved communities around the world.
+          </p>
+          
+          <div className="space-y-3 mb-6">
+            <a 
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfOdwDOD397b64vCNtmbR6iAuQiqC1yYLnca1YIZdnIUyU4wg/viewform?usp=sharing&ouid=101040064194418031486"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full bg-[#33848C] text-white py-3 px-4 rounded text-sm font-medium hover:bg-[#2a6b72] transition-colors block text-center"
+            >
+              Become a Volunteer Ophthalmologist
+            </a>
+            <button className="w-full bg-gray-200 text-gray-800 py-3 px-4 rounded text-sm font-medium hover:bg-gray-300 transition-colors">
+              Become An Optometry Ambassador
+            </button>
+            <button className="w-full bg-gray-200 text-gray-800 py-3 px-4 rounded text-sm font-medium hover:bg-gray-300 transition-colors">
+              Patient Application for Free Surgery
+            </button>
+            <button className="w-full bg-[#33848C] text-white py-4 px-4 rounded text-lg font-bold hover:bg-[#2a6b72] transition-colors">
+              DONATE NOW
+            </button>
+            <p className="text-center text-sm text-gray-600">$250 = 1 Surgery</p>
+          </div>
+          
+          <div className="grid grid-cols-2 gap-3">
+            <a 
+              href="https://docs.google.com/forms/d/18g4tMYwF7ZD_XTPlRI58JjW1DLtTognrel1q-rTbfAs/preview?edit_requested=true"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-gray-100 p-3 rounded text-center hover:bg-gray-200 transition-colors"
+            >
+              <p className="font-semibold text-sm text-gray-800">For Ophthalmologists</p>
+              <p className="text-xs text-gray-600 mt-1">Enter Patient Details</p>
+            </a>
+            <a 
+              href="https://docs.google.com/forms/d/18g4tMYwF7ZD_XTPlRI58JjW1DLtTognrel1q-rTbfAs/preview?edit_requested=true"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-gray-100 p-3 rounded text-center hover:bg-gray-200 transition-colors"
+            >
+              <p className="font-semibold text-sm text-gray-800">For Optometrists</p>
+              <p className="text-xs text-gray-600 mt-1">Enter Patient Details</p>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      {/* Scroll indicator */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+        <div className="bg-gray-600 bg-opacity-50 p-2 rounded">
+          <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+          </svg>
         </div>
       </div>
     </section>

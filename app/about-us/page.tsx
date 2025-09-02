@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import BoardOfDirectors from '@/components/BoardOfDirectors'
 import { getPage } from '@/lib/content'
 
 export default function AboutPage() {
@@ -81,6 +82,8 @@ export default function AboutPage() {
           </div>
         </div>
       </main>
+      
+      <BoardOfDirectors />
       
       <Footer />
     </div>

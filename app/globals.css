@@ -38,4 +38,21 @@ body {
   .container-custom {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
+  
+  /* Leaflet map styles */
+  .leaflet-container {
+    font-family: inherit;
+  }
+  
+  .leaflet-popup-content-wrapper {
+    border-radius: 8px;
+  }
+  
+  .leaflet-popup-content {
+    margin: 8px 12px;
+  }
+  
+  .leaflet-control-attribution {
+    font-size: 10px;
+  }
 } 

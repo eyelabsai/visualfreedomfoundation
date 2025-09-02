@@ -136,16 +136,11 @@ export default function MyAccountPage() {
       const { geocodeAddress } = await import('@/lib/geocoding')
       
       // Prepare basic profile data
-      const dataToSave: any = {
+      const dataToSave = {
         firstName: formData.firstName,
         lastName: formData.lastName,
         email: formData.email,
         updatedAt: new Date().toISOString()
-      }
-
-      // Ensure surgeons have accountStatus: 'active' for map display
-      if (userData?.role === 'surgeon') {
-        dataToSave.accountStatus = 'active'
       }
 
       // If user is a surgeon and has location data, handle location update
@@ -371,63 +366,63 @@ export default function MyAccountPage() {
           {/* Tab Content */}
           {activeTab === 'account' && (
             <div className="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-3">
-            <div className="lg:col-span-2">
-              <div className="bg-white shadow rounded-lg">
-                <div className="px-4 py-5 sm:p-6">
-                  <div className="sm:flex sm:items-center sm:justify-between">
-                    <div>
-                      <h2 className="text-xl font-semibold text-gray-900">Profile Information</h2>
-                      <p className="mt-1 text-sm text-gray-600">
-                        Update your personal information
-                        {userData?.role === 'surgeon' && (
-                          <span className="block mt-1 text-blue-600">
-                            💡 Surgeons: Add your location to appear on the surgeon map
-                          </span>
-                        )}
-                      </p>
-                    </div>
-                    {!isEditing && (
-                      <button
-                        onClick={() => setIsEditing(true)}
-                        className="btn-secondary"
-                      >
-                        Edit Profile
-                      </button>
-                    )}
-                  </div>
-
-                  {error && (
-                    <div className="mt-4 bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded">
-                      {error}
-                    </div>
-                  )}
-
-                  {success && (
-                    <div className="mt-4 bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded">
-                      <div className="flex">
-                        <div className="flex-shrink-0">
-                          <svg className="h-5 w-5 text-green-400" viewBox="0 0 20 20" fill="currentColor">
-                            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                          </svg>
-                        </div>
-                        <div className="ml-3">
-                          <p className="text-sm text-green-700">{success}</p>
-                          {userData?.role === 'surgeon' && success.includes('location') && (
-                            <div className="mt-2">
-                              <Link 
-                                href="/surgeon-map" 
-                                className="text-sm text-green-600 hover:text-green-500 underline"
-                              >
-                                View yourself on the surgeon map →
-                              </Link>
-                            </div>
+              <div className="lg:col-span-2">
+                <div className="bg-white shadow rounded-lg">
+                  <div className="px-4 py-5 sm:p-6">
+                    <div className="sm:flex sm:items-center sm:justify-between">
+                      <div>
+                        <h2 className="text-xl font-semibold text-gray-900">Profile Information</h2>
+                        <p className="mt-1 text-sm text-gray-600">
+                          Update your personal information
+                          {userData?.role === 'surgeon' && (
+                            <span className="block mt-1 text-blue-600">
+                              💡 Surgeons: Add your location to appear on the surgeon map
+                            </span>
                           )}
+                        </p>
+                      </div>
+                      {!isEditing && (
+                        <button
+                          onClick={() => setIsEditing(true)}
+                          className="btn-secondary"
+                        >
+                          Edit Profile
+                        </button>
+                      )}
+                    </div>
+
+                    {error && (
+                      <div className="mt-4 bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded">
+                        {error}
+                      </div>
+                    )}
+
+                                         {success && (
+                       <div className="mt-4 bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded">
+                        <div className="flex">
+                          <div className="flex-shrink-0">
+                            <svg className="h-5 w-5 text-green-400" viewBox="0 0 20 20" fill="currentColor">
+                              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                            </svg>
+                          </div>
+                          <div className="ml-3">
+                            <p className="text-sm text-green-700">{success}</p>
+                            {userData?.role === 'surgeon' && success.includes('location') && (
+                              <div className="mt-2">
+                                <Link 
+                                  href="/surgeon-map" 
+                                  className="text-sm text-green-600 hover:text-green-500 underline"
+                                >
+                                  View yourself on the surgeon map →
+                                </Link>
+                              </div>
+                            )}
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  )}
+                    )}
 
-                  <div className="mt-6">
+                    <div className="mt-6">
                     {isEditing ? (
                       <form onSubmit={handleUpdateProfile} className="space-y-6">
                         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
@@ -627,10 +622,278 @@ export default function MyAccountPage() {
                 </div>
               </div>
 
-            </div>
 
-            {/* Sidebar */}
-            <div>
+          </div>
+        )}
+
+        {/* Patient Log Tab Content */}
+        {activeTab === 'patient-log' && userData?.role === 'surgeon' && (
+          <div className="mt-8">
+            <div className="bg-white shadow rounded-lg">
+              <div className="px-4 py-5 sm:p-6">
+                <div className="sm:flex sm:items-center sm:justify-between">
+                  <div>
+                    <h2 className="text-xl font-semibold text-gray-900">Patient Records</h2>
+                    <p className="mt-1 text-sm text-gray-600">Log and manage your surgical procedures</p>
+                  </div>
+                  <button
+                    onClick={() => setShowPatientForm(true)}
+                    className="btn-primary"
+                  >
+                    + New Patient
+                  </button>
+                </div>
+
+                {patientError && (
+                  <div className="mt-4 bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded">
+                    {patientError}
+                  </div>
+                )}
+
+                {patientSuccess && (
+                  <div className="mt-4 bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded">
+                    {patientSuccess}
+                  </div>
+                )}
+
+                {/* New Patient Form */}
+                {showPatientForm && (
+                  <div className="mt-6 border-t pt-6">
+                    <h3 className="text-lg font-medium text-gray-900 mb-4">Add New Patient Record</h3>
+                    <form onSubmit={handleAddPatient} className="space-y-4">
+                      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                        <div>
+                          <label htmlFor="patientName" className="block text-sm font-medium text-gray-700">
+                            Patient Name *
+                          </label>
+                          <input
+                            id="patientName"
+                            name="patientName"
+                            type="text"
+                            required
+                            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                            value={patientFormData.patientName}
+                            onChange={handlePatientFormChange}
+                          />
+                        </div>
+                        <div>
+                          <label htmlFor="dateOfBirth" className="block text-sm font-medium text-gray-700">
+                            Date of Birth *
+                          </label>
+                          <input
+                            id="dateOfBirth"
+                            name="dateOfBirth"
+                            type="date"
+                            required
+                            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                            value={patientFormData.dateOfBirth}
+                            onChange={handlePatientFormChange}
+                          />
+                          {patientFormData.dateOfBirth && (
+                            <p className="mt-1 text-sm text-gray-500">Age: {calculateAge(patientFormData.dateOfBirth)} years</p>
+                          )}
+                        </div>
+                      </div>
+
+                      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                        <div>
+                          <label htmlFor="procedureType" className="block text-sm font-medium text-gray-700">
+                            Procedure Type *
+                          </label>
+                          <select
+                            id="procedureType"
+                            name="procedureType"
+                            required
+                            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                            value={patientFormData.procedureType}
+                            onChange={handlePatientFormChange}
+                          >
+                            <option value="">Select Procedure</option>
+                            <option value="LASIK">LASIK</option>
+                            <option value="PRK">PRK</option>
+                            <option value="SMILE">SMILE</option>
+                            <option value="Cataract Surgery">Cataract Surgery</option>
+                            <option value="Retinal Surgery">Retinal Surgery</option>
+                            <option value="Corneal Transplant">Corneal Transplant</option>
+                            <option value="Glaucoma Surgery">Glaucoma Surgery</option>
+                            <option value="Other">Other</option>
+                          </select>
+                        </div>
+                        <div>
+                          <label htmlFor="procedureLocation" className="block text-sm font-medium text-gray-700">
+                            Procedure Location *
+                          </label>
+                          <input
+                            id="procedureLocation"
+                            name="procedureLocation"
+                            type="text"
+                            required
+                            placeholder="Hospital/Clinic Name"
+                            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                            value={patientFormData.procedureLocation}
+                            onChange={handlePatientFormChange}
+                          />
+                        </div>
+                      </div>
+
+                      <div>
+                        <label htmlFor="procedureDate" className="block text-sm font-medium text-gray-700">
+                          Procedure Date *
+                        </label>
+                        <input
+                          id="procedureDate"
+                          name="procedureDate"
+                          type="date"
+                          required
+                          className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                          value={patientFormData.procedureDate}
+                          onChange={handlePatientFormChange}
+                        />
+                      </div>
+
+                      <div>
+                        <label htmlFor="notes" className="block text-sm font-medium text-gray-700">
+                          Notes (Optional)
+                        </label>
+                        <textarea
+                          id="notes"
+                          name="notes"
+                          rows={3}
+                          className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                          placeholder="Additional notes about the procedure..."
+                          value={patientFormData.notes}
+                          onChange={handlePatientFormChange}
+                        />
+                      </div>
+
+                      <div className="flex space-x-3 pt-4">
+                        <button
+                          type="submit"
+                          disabled={patientLoading}
+                          className="btn-primary disabled:opacity-50"
+                        >
+                          {patientLoading ? 'Adding...' : 'Add Patient Record'}
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => {
+                            setShowPatientForm(false)
+                            setPatientError('')
+                            setPatientSuccess('')
+                          }}
+                          className="btn-secondary"
+                        >
+                          Cancel
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                )}
+
+                {/* Patient List */}
+                <div className="mt-6">
+                  <h3 className="text-lg font-medium text-gray-900 mb-4">
+                    Recent Patients ({patients.length})
+                  </h3>
+                  {patients.length > 0 ? (
+                    <div className="overflow-x-auto">
+                      <table className="w-full divide-y divide-gray-200">
+                        <thead className="bg-gray-50">
+                          <tr>
+                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-1/6">
+                              Patient
+                            </th>
+                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-16">
+                              Age
+                            </th>
+                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-1/6">
+                              Procedure
+                            </th>
+                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-1/6">
+                              Date
+                            </th>
+                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-1/6">
+                              Location
+                            </th>
+                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-16">
+                              Actions
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody className="bg-white divide-y divide-gray-200">
+                          {patients.slice(0, 5).map((patient, index) => (
+                            <tr key={index}>
+                              <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                                {patient.patientName}
+                              </td>
+                              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                {patient.age}
+                              </td>
+                              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                {patient.procedureType}
+                              </td>
+                              <td className="border border-gray-300 px-4 py-4 text-sm text-gray-500">
+                                {new Date(patient.procedureDate).toLocaleDateString()}
+                              </td>
+                              <td className="border border-gray-300 px-4 py-4 text-sm text-gray-500">
+                                {patient.procedureLocation}
+                              </td>
+                              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 bg-gray-50 text-center w-16">
+                                <div className="space-y-2">
+                                  {deleteConfirm === patient.id ? (
+                                    <>
+                                      <button
+                                        onClick={() => handleDeletePatient(patient.id, patient.patientName)}
+                                        disabled={patientLoading}
+                                        className="w-8 h-8 bg-red-50 hover:bg-red-100 text-red-700 hover:text-red-800 rounded-md border border-red-200 hover:border-red-300 transition-colors duration-200 disabled:opacity-50 flex items-center justify-center text-xs"
+                                      >
+                                        {patientLoading ? '⋯' : '✓'}
+                                      </button>
+                                      <button
+                                        onClick={() => setDeleteConfirm(null)}
+                                        disabled={patientLoading}
+                                        className="w-8 h-8 bg-gray-50 hover:bg-gray-100 text-gray-600 hover:text-gray-800 rounded-md border border-gray-200 hover:border-gray-300 transition-colors duration-200 disabled:opacity-50 flex items-center justify-center text-xs"
+                                      >
+                                        ✕
+                                      </button>
+                                    </>
+                                  ) : (
+                                    <button
+                                      onClick={() => handleDeletePatient(patient.id, patient.patientName)}
+                                      className="w-8 h-8 bg-gray-100 hover:bg-gray-200 text-gray-700 hover:text-gray-900 rounded-md border border-gray-300 hover:border-gray-400 transition-colors duration-200 flex items-center justify-center"
+                                      title="Delete patient record"
+                                    >
+                                      🗑️
+                                    </button>
+                                  )}
+                                </div>
+                              </td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                      {patients.length > 5 && (
+                        <div className="px-6 py-3 bg-gray-50 text-center">
+                          <p className="text-sm text-gray-500">
+                            Showing 5 of {patients.length} patients
+                          </p>
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    <div className="text-center py-8">
+                      <p className="text-gray-500">No patient records yet. Click "New Patient" to add your first record.</p>
+                    </div>
+                  )}
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Sidebar - Always visible */}
+        <div className="mt-8">
+          <div className="bg-gray-50 rounded-lg p-6">
               <div className="bg-gray-50 rounded-lg p-6">
                 <h2 className="text-xl font-semibold text-gray-900 mb-4">Quick Actions</h2>
                 
@@ -678,272 +941,6 @@ export default function MyAccountPage() {
               </div>
             </div>
           </div>
-          )}
-
-          {/* Patient Log Tab Content */}
-          {activeTab === 'patient-log' && userData?.role === 'surgeon' && (
-            <div className="mt-8">
-              <div className="bg-white shadow rounded-lg">
-                <div className="px-4 py-5 sm:p-6">
-                  <div className="sm:flex sm:items-center sm:justify-between">
-                    <div>
-                      <h2 className="text-xl font-semibold text-gray-900">Patient Records</h2>
-                      <p className="mt-1 text-sm text-gray-600">Log and manage your surgical procedures</p>
-                    </div>
-                    <button
-                      onClick={() => setShowPatientForm(true)}
-                      className="btn-primary"
-                    >
-                      + New Patient
-                    </button>
-                  </div>
-
-                  {patientError && (
-                    <div className="mt-4 bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded">
-                      {patientError}
-                    </div>
-                  )}
-
-                  {patientSuccess && (
-                    <div className="mt-4 bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded">
-                      {patientSuccess}
-                    </div>
-                  )}
-
-                  {/* New Patient Form */}
-                  {showPatientForm && (
-                    <div className="mt-6 border-t pt-6">
-                      <h3 className="text-lg font-medium text-gray-900 mb-4">Add New Patient Record</h3>
-                      <form onSubmit={handleAddPatient} className="space-y-4">
-                        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                          <div>
-                            <label htmlFor="patientName" className="block text-sm font-medium text-gray-700">
-                              Patient Name *
-                            </label>
-                            <input
-                              id="patientName"
-                              name="patientName"
-                              type="text"
-                              required
-                              className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-                              value={patientFormData.patientName}
-                              onChange={handlePatientFormChange}
-                            />
-                          </div>
-                          <div>
-                            <label htmlFor="dateOfBirth" className="block text-sm font-medium text-gray-700">
-                              Date of Birth *
-                            </label>
-                            <input
-                              id="dateOfBirth"
-                              name="dateOfBirth"
-                              type="date"
-                              required
-                              className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-                              value={patientFormData.dateOfBirth}
-                              onChange={handlePatientFormChange}
-                            />
-                            {patientFormData.dateOfBirth && (
-                              <p className="mt-1 text-sm text-gray-500">Age: {calculateAge(patientFormData.dateOfBirth)} years</p>
-                            )}
-                          </div>
-                        </div>
-
-                        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                          <div>
-                            <label htmlFor="procedureType" className="block text-sm font-medium text-gray-700">
-                              Procedure Type *
-                            </label>
-                            <select
-                              id="procedureType"
-                              name="procedureType"
-                              required
-                              className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-                              value={patientFormData.procedureType}
-                              onChange={handlePatientFormChange}
-                            >
-                              <option value="">Select Procedure</option>
-                              <option value="LASIK">LASIK</option>
-                              <option value="PRK">PRK</option>
-                              <option value="SMILE">SMILE</option>
-                              <option value="Cataract Surgery">Cataract Surgery</option>
-                              <option value="Retinal Surgery">Retinal Surgery</option>
-                              <option value="Corneal Transplant">Corneal Transplant</option>
-                              <option value="Glaucoma Surgery">Glaucoma Surgery</option>
-                              <option value="Other">Other</option>
-                            </select>
-                          </div>
-                          <div>
-                            <label htmlFor="procedureLocation" className="block text-sm font-medium text-gray-700">
-                              Procedure Location *
-                            </label>
-                            <input
-                              id="procedureLocation"
-                              name="procedureLocation"
-                              type="text"
-                              required
-                              placeholder="Hospital/Clinic Name"
-                              className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-                              value={patientFormData.procedureLocation}
-                              onChange={handlePatientFormChange}
-                            />
-                          </div>
-                        </div>
-
-                        <div>
-                          <label htmlFor="procedureDate" className="block text-sm font-medium text-gray-700">
-                            Procedure Date *
-                          </label>
-                          <input
-                            id="procedureDate"
-                            name="procedureDate"
-                            type="date"
-                            required
-                            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-                            value={patientFormData.procedureDate}
-                            onChange={handlePatientFormChange}
-                          />
-                        </div>
-
-                        <div>
-                          <label htmlFor="notes" className="block text-sm font-medium text-gray-700">
-                            Notes (Optional)
-                          </label>
-                          <textarea
-                            id="notes"
-                            name="notes"
-                            rows={3}
-                            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-                            placeholder="Additional notes about the procedure..."
-                            value={patientFormData.notes}
-                            onChange={handlePatientFormChange}
-                          />
-                        </div>
-
-                        <div className="flex space-x-3 pt-4">
-                          <button
-                            type="submit"
-                            disabled={patientLoading}
-                            className="btn-primary disabled:opacity-50"
-                          >
-                            {patientLoading ? 'Adding...' : 'Add Patient Record'}
-                          </button>
-                          <button
-                            type="button"
-                            onClick={() => {
-                              setShowPatientForm(false)
-                              setPatientError('')
-                              setPatientSuccess('')
-                            }}
-                            className="btn-secondary"
-                          >
-                            Cancel
-                          </button>
-                        </div>
-                      </form>
-                    </div>
-                  )}
-
-                  {/* Patient List */}
-                  <div className="mt-6">
-                    <h3 className="text-lg font-medium text-gray-900 mb-4">
-                      Recent Patients ({patients.length})
-                    </h3>
-                    {patients.length > 0 ? (
-                      <div className="overflow-x-auto">
-                        <table className="w-full divide-y divide-gray-200">
-                          <thead className="bg-gray-50">
-                            <tr>
-                              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-1/6">
-                                Patient
-                              </th>
-                              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-16">
-                                Age
-                              </th>
-                              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-1/6">
-                                Procedure
-                              </th>
-                              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-1/6">
-                                Date
-                              </th>
-                              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-1/6">
-                                Location
-                              </th>
-                              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-16">
-                                Actions
-                              </th>
-                            </tr>
-                          </thead>
-                          <tbody className="bg-white divide-y divide-gray-200">
-                            {patients.slice(0, 5).map((patient, index) => (
-                              <tr key={index}>
-                                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                                  {patient.patientName}
-                                </td>
-                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                  {patient.age}
-                                </td>
-                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                  {patient.procedureType}
-                                </td>
-                                <td className="border border-gray-300 px-4 py-4 text-sm text-gray-500">
-                                  {new Date(patient.procedureDate).toLocaleDateString()}
-                                </td>
-                                <td className="border border-gray-300 px-4 py-4 text-sm text-gray-500">
-                                  {patient.procedureLocation}
-                                </td>
-                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 bg-gray-50 text-center w-16">
-                                  <div className="space-y-2">
-                                    {deleteConfirm === patient.id ? (
-                                      <>
-                                        <button
-                                          onClick={() => handleDeletePatient(patient.id, patient.patientName)}
-                                          disabled={patientLoading}
-                                          className="w-8 h-8 bg-red-50 hover:bg-red-100 text-red-700 hover:text-red-800 rounded-md border border-red-200 hover:border-red-300 transition-colors duration-200 disabled:opacity-50 flex items-center justify-center text-xs"
-                                        >
-                                          {patientLoading ? '⋯' : '✓'}
-                                        </button>
-                                        <button
-                                          onClick={() => setDeleteConfirm(null)}
-                                          disabled={patientLoading}
-                                          className="w-8 h-8 bg-gray-50 hover:bg-gray-100 text-gray-600 hover:text-gray-800 rounded-md border border-gray-200 hover:border-gray-300 transition-colors duration-200 disabled:opacity-50 flex items-center justify-center text-xs"
-                                        >
-                                          ✕
-                                        </button>
-                                      </>
-                                    ) : (
-                                      <button
-                                        onClick={() => handleDeletePatient(patient.id, patient.patientName)}
-                                        className="w-8 h-8 bg-gray-100 hover:bg-gray-200 text-gray-700 hover:text-gray-900 rounded-md border border-gray-300 hover:border-gray-400 transition-colors duration-200 flex items-center justify-center"
-                                        title="Delete patient record"
-                                      >
-                                        🗑️
-                                      </button>
-                                    )}
-                                  </div>
-                                </td>
-                              </tr>
-                            ))}
-                          </tbody>
-                        </table>
-                        {patients.length > 5 && (
-                          <div className="px-6 py-3 bg-gray-50 text-center">
-                            <p className="text-sm text-gray-500">
-                              Showing 5 of {patients.length} patients
-                            </p>
-                          </div>
-                        )}
-                      </div>
-                    ) : (
-                      <div className="text-center py-8">
-                        <p className="text-gray-500">No patient records yet. Click "New Patient" to add your first record.</p>
-                      </div>
-                    )}
-                  </div>
-                </div>
-              </div>
-            </div>
-          )}
         </div>
       </main>
       
