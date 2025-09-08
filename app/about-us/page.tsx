@@ -28,20 +28,12 @@ export default function AboutPage() {
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-                <div className="bg-white border border-gray-200 rounded-lg p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">Our Mission</h3>
-                  <p className="text-gray-700">
-                    The Visual Freedom Foundation is a nonprofit organization dedicated to combating the leading causes of preventable blindness through innovative refractive surgery programs for disadvantaged populations worldwide.
-                  </p>
-                </div>
-                
-                <div className="bg-white border border-gray-200 rounded-lg p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">Our Vision</h3>
-                  <p className="text-gray-700">
-                    A world where no one is held back by visual impairments. We believe in the power of sight to unlock opportunities and create brighter futures.
-                  </p>
-                </div>
+              <div className="mb-12">
+                <img 
+                  src="/images/content/aboutusmissionvalueimpact.png" 
+                  alt="Our Mission, Vision, and Impact" 
+                  className="w-full h-auto rounded-lg shadow-lg"
+                />
               </div>
 
               <div className="bg-vff-blue text-white rounded-lg p-8">
