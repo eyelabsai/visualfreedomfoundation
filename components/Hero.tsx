@@ -35,9 +35,14 @@ export default function Hero() {
             >
               Become a Volunteer Ophthalmologist
             </a>
-            <button className="w-full bg-gray-200 text-gray-800 py-3 px-4 rounded text-sm font-medium hover:bg-gray-300 transition-colors">
+            <a
+              href="https://forms.gle/j9xK9T774Ab7sXw16"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full bg-gray-200 text-gray-800 py-3 px-4 rounded text-sm font-medium hover:bg-gray-300 transition-colors block text-center"
+            >
               Become An Optometry Ambassador
-            </button>
+            </a>
             <button className="w-full bg-gray-200 text-gray-800 py-3 px-4 rounded text-sm font-medium hover:bg-gray-300 transition-colors">
               Patient Application for Free Surgery
             </button>
@@ -103,9 +108,14 @@ export default function Hero() {
             >
               Become a Volunteer Ophthalmologist
             </a>
-            <button className="w-full bg-gray-200 text-gray-800 py-3 px-4 rounded text-sm font-medium hover:bg-gray-300 transition-colors">
+            <a
+              href="https://forms.gle/j9xK9T774Ab7sXw16"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full bg-gray-200 text-gray-800 py-3 px-4 rounded text-sm font-medium hover:bg-gray-300 transition-colors block text-center"
+            >
               Become An Optometry Ambassador
-            </button>
+            </a>
             <button className="w-full bg-gray-200 text-gray-800 py-3 px-4 rounded text-sm font-medium hover:bg-gray-300 transition-colors">
               Patient Application for Free Surgery
             </button>
