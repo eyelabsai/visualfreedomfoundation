@@ -29,7 +29,7 @@ export default function OurDream() {
         </div>
         
         {/* Quote Image */}
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-2xl mx-auto">
           <img 
             src="/images/content/quote.png" 
             alt="Quote" 
