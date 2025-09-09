@@ -16,7 +16,7 @@ export default function FoundationPillars() {
         {/* Foundation Pillars Image */}
         <div className="max-w-4xl mx-auto">
           <img 
-            src="/images/content/foundationpills.png" 
+            src="/images/content/Foundation.svg" 
             alt="Foundation Pillars" 
             className="w-full h-auto rounded-lg shadow-lg"
           />
