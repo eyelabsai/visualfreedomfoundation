@@ -10,8 +10,8 @@ export default function Hero() {
         className="absolute inset-0 bg-cover bg-no-repeat"
         style={{
           backgroundImage: "url('/images/content/Jessica-Cox-Aviation_cropped-2.png')",
-          // Keep her head fully visible and nudge left for text space
-          backgroundPosition: 'left 15% top',
+          // Keep her head fully visible and nudge left for text space, move down to show more plane
+          backgroundPosition: 'left 15% top 20%',
         }}
       />
 
