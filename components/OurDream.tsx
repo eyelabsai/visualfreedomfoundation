@@ -15,6 +15,18 @@ export default function OurDream() {
             and confidence, ensuring that everyone, regardless of their circumstances,
             can experience the freedom that comes with clear vision.
           </p>
+          
+          {/* Patient Application Link */}
+          <div className="mt-8">
+            <a 
+              href="https://forms.gle/MjFgRaNqUHU3f1Aj7" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-block bg-[#33848C] hover:bg-[#2a6b73] text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-300 shadow-lg hover:shadow-xl"
+            >
+              Apply for Free Surgery
+            </a>
+          </div>
         </div>
         
         {/* Video Section */}
