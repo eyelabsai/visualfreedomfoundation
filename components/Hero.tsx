@@ -43,9 +43,14 @@ export default function Hero() {
             >
               Become An Optometry Ambassador
             </a>
-            <button className="w-full bg-gray-200 text-gray-800 py-2 px-3 rounded text-xs font-medium hover:bg-gray-300 transition-colors">
+            <a
+              href="https://forms.gle/MjFgRaNqUHU3f1Aj7"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full bg-gray-200 text-gray-800 py-2 px-3 rounded text-xs font-medium hover:bg-gray-300 transition-colors block text-center"
+            >
               Patient Application for Free Surgery
-            </button>
+            </a>
             <button className="w-full bg-[#33848C] text-white py-4 px-4 rounded text-lg font-bold hover:bg-[#2a6b72] transition-colors">
               DONATE NOW
             </button>
@@ -116,9 +121,14 @@ export default function Hero() {
             >
               Become An Optometry Ambassador
             </a>
-            <button className="w-full bg-gray-200 text-gray-800 py-2 px-3 rounded text-xs font-medium hover:bg-gray-300 transition-colors">
+            <a
+              href="https://forms.gle/MjFgRaNqUHU3f1Aj7"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full bg-gray-200 text-gray-800 py-2 px-3 rounded text-xs font-medium hover:bg-gray-300 transition-colors block text-center"
+            >
               Patient Application for Free Surgery
-            </button>
+            </a>
             <button className="w-full bg-[#33848C] text-white py-4 px-4 rounded text-lg font-bold hover:bg-[#2a6b72] transition-colors">
               DONATE NOW
             </button>
