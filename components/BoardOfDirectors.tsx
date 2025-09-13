@@ -56,6 +56,14 @@ const boardMembers = [
     location: "Pune, India",
     image: "/images/board-members/AshiyanaNariani.jpg",
     link: "https://cureblindness.org/who-we-are/dr-ashiyana-nariani"
+  },
+  {
+    name: "Suzanne LeKamp Adkins, OD, FAAO",
+    title: "Board Member",
+    organization: "Weiner Eye Group",
+    location: "Salina, Kansas, USA",
+    image: "/images/board-members/Suzanne LaKamppng.png",
+    link: "#"
   }
 ]
 
