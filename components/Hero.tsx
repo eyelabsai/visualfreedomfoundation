@@ -85,9 +85,9 @@ export default function Hero() {
           After LASIK, she gained the freedom of clear vision without limits.
         </p>
         <div className="flex justify-end">
-          <button className="border-2 border-white text-white px-8 py-3 text-lg font-medium hover:bg-white hover:text-black transition-all duration-300">
+          <Link href="/about-us" className="border-2 border-white text-white px-8 py-3 text-lg font-medium hover:bg-white hover:text-black transition-all duration-300">
             Tell Me How
-          </button>
+          </Link>
         </div>
       </div>
 
