@@ -64,7 +64,7 @@ export default function Header() {
             </Link>
           </div>
           
-          <nav className="hidden lg:flex items-center space-x-8 ml-12">
+          <nav className="hidden lg:flex items-center space-x-6 ml-8">
             <Link href="/" className="text-white hover:text-[#87CEEB] transition-colors whitespace-nowrap font-medium">
               HOME
             </Link>
@@ -74,9 +74,9 @@ export default function Header() {
             <Link href="/resources" className="text-white hover:text-[#87CEEB] transition-colors whitespace-nowrap font-medium">
               RESOURCES
             </Link>
-            <Link href="/surgeon-map" className="text-white hover:text-[#87CEEB] transition-colors whitespace-nowrap font-medium">
+            {/* <Link href="/surgeon-map" className="text-white hover:text-[#87CEEB] transition-colors whitespace-nowrap font-medium">
               SURGEON MAP
-            </Link>
+            </Link> */}
             <Link href="/partners-and-community" className="text-white hover:text-[#87CEEB] transition-colors whitespace-nowrap font-medium">
               OUR PARTNERS
             </Link>
@@ -167,13 +167,13 @@ export default function Header() {
               >
                 RESOURCES
               </Link>
-              <Link 
+              {/* <Link 
                 href="/surgeon-map" 
                 className="text-white hover:text-[#87CEEB] transition-colors font-medium px-4 py-2 hover:bg-white/20 rounded-md"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 SURGEON MAP
-              </Link>
+              </Link> */}
               <Link 
                 href="/partners-and-community" 
                 className="text-white hover:text-[#87CEEB] transition-colors font-medium px-4 py-2 hover:bg-white/20 rounded-md"
