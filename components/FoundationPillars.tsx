@@ -39,12 +39,31 @@ const pillarData: PillarData[] = [
 
 export default function FoundationPillars() {
   const [hoveredPillar, setHoveredPillar] = useState<string | null>(null)
+  const [hoverTimeout, setHoverTimeout] = useState<NodeJS.Timeout | null>(null)
 
   const handleMouseEnter = (pillarId: string) => {
+    if (hoverTimeout) {
+      clearTimeout(hoverTimeout)
+      setHoverTimeout(null)
+    }
     setHoveredPillar(pillarId)
   }
 
   const handleMouseLeave = () => {
+    const timeout = setTimeout(() => {
+      setHoveredPillar(null)
+    }, 300) // Increased delay to prevent flickering
+    setHoverTimeout(timeout)
+  }
+
+  const handleTooltipMouseEnter = () => {
+    if (hoverTimeout) {
+      clearTimeout(hoverTimeout)
+      setHoverTimeout(null)
+    }
+  }
+
+  const handleTooltipMouseLeave = () => {
     setHoveredPillar(null)
   }
 
@@ -121,7 +140,11 @@ export default function FoundationPillars() {
 
       {/* Hover tooltip */}
       {hoveredPillar && (
-        <div className="absolute top-2 left-1/2 transform -translate-x-1/2 z-50 bg-white rounded-lg shadow-xl p-3 max-w-xs border">
+        <div 
+          className="absolute top-2 left-1/2 transform -translate-x-1/2 z-50 bg-white rounded-lg shadow-xl p-3 max-w-xs border"
+          onMouseEnter={handleTooltipMouseEnter}
+          onMouseLeave={handleTooltipMouseLeave}
+        >
           <div className="text-center">
             <h3 className="text-sm font-bold text-gray-900 mb-2">
               {getPillarInfo(hoveredPillar)?.title}
