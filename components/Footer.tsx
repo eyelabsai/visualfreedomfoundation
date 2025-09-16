@@ -24,7 +24,6 @@ export default function Footer() {
             <h4 className="font-bold mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li><Link href="/about-us" className="text-gray-300 hover:text-white transition-colors">About Us</Link></li>
-              <li><Link href="/services" className="text-gray-300 hover:text-white transition-colors">Services</Link></li>
               <li><Link href="/key-pillars" className="text-gray-300 hover:text-white transition-colors">Key Pillars</Link></li>
               <li><Link href="/contact-us" className="text-gray-300 hover:text-white transition-colors">Contact</Link></li>
             </ul>

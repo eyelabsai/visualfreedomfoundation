@@ -1,0 +1,34 @@
+{
+  "title": "Resources",
+  "slug": "resources",
+  "description": "Essential tools and information to support your involvement with the Visual Freedom Foundation",
+  "content": {
+    "hero": {
+      "title": "Resources",
+      "subtitle": "Essential tools and information to support your involvement with the Visual Freedom Foundation"
+    },
+    "practiceKit": {
+      "title": "VFF Practice Kit",
+      "description": "The Visual Freedom Foundation Practice Kit equips clinics with the tools they need to promote VFF in their communities. It includes essential patient-facing materials to raise awareness, along with media resources to maximize local coverage about your practice and the Visual Freedom Foundation.",
+      "items": [
+        "Press Release",
+        "Social Post Copy",
+        "Talking Points"
+      ]
+    },
+    "faqs": [
+      {
+        "question": "How Can I participate in the VFF?",
+        "answer": "We welcome medical professionals, institutions, and organizations to join our network. Contact us by joining VFF on the home page or email info@visual-freedom.org."
+      },
+      {
+        "question": "Do You Provide Direct Patient Care?",
+        "answer": "We work through our network of partner organizations and medical professionals to provide vision care services. Contact us to learn about available programs In your area."
+      },
+      {
+        "question": "Where Do You Operate?",
+        "answer": "We operate globally through our network of partners and have programs active in over 400 countries worldwide, focusing on underserved communities with limited access to vision care."
+      }
+    ]
+  }
+}

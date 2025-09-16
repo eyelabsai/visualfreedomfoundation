@@ -176,7 +176,7 @@ export default function ContactPage() {
                 <div className="bg-white border border-gray-200 rounded-lg p-6">
                   <h3 className="text-lg font-semibold text-gray-900 mb-3">How can I become a partner?</h3>
                   <p className="text-gray-700">
-                    We welcome medical professionals, institutions, and organizations to join our network. Contact us through the form above or visit our Partners & Community page to learn more.
+                    We welcome medical professionals, institutions, and organizations to join our network. Contact us through the form above or <a href="https://docs.google.com/forms/d/e/1FAIpQLSfOdwDOD397b64vCNtmbR6iAuQiqC1yYLnca1YIZdnIUyU4wg/viewform?usp=sharing&ouid=101040064194418031486" target="_blank" rel="noopener noreferrer" className="text-vff-blue hover:text-blue-600 underline">click here</a> to become a VFF Ambassador.
                   </p>
                 </div>
                 

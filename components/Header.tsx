@@ -65,13 +65,13 @@ export default function Header() {
           </div>
           
           <nav className="hidden lg:flex items-center space-x-8 ml-12">
-            <Link href="/" className="text-white hover:text-[#87CEEB] transition-colors whitespace-nowrap font-medium bg-white/20 px-3 py-1 rounded">
+            <Link href="/" className="text-white hover:text-[#87CEEB] transition-colors whitespace-nowrap font-medium">
               HOME
             </Link>
             <Link href="/about-us" className="text-white hover:text-[#87CEEB] transition-colors whitespace-nowrap font-medium">
               ABOUT US
             </Link>
-            <Link href="/services" className="text-white hover:text-[#87CEEB] transition-colors whitespace-nowrap font-medium">
+            <Link href="/resources" className="text-white hover:text-[#87CEEB] transition-colors whitespace-nowrap font-medium">
               RESOURCES
             </Link>
             <Link href="/surgeon-map" className="text-white hover:text-[#87CEEB] transition-colors whitespace-nowrap font-medium">
@@ -161,7 +161,7 @@ export default function Header() {
                 ABOUT US
               </Link>
               <Link 
-                href="/services" 
+                href="/resources" 
                 className="text-white hover:text-[#87CEEB] transition-colors font-medium px-4 py-2 hover:bg-white/20 rounded-md"
                 onClick={() => setMobileMenuOpen(false)}
               >

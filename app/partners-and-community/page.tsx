@@ -1,38 +1,68 @@
 import React from 'react'
+import Image from 'next/image'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
 export default function PartnersPage() {
-  const partners = [
+  const medicalPartners = [
     {
-      name: "Parkhurst NuVision",
+      name: "Parkhurst Vision",
       location: "San Antonio, TX, USA",
       description: "Leading vision correction center providing innovative LASIK and refractive surgery solutions.",
-      contact: "Dr. Greg Parkhurst, MD - Board Chairman"
+      contact: "Dr. Greg Parkhurst, MD - Board Chairman",
+      logo: "/images/content/logo.svg"
     },
     {
-      name: "iOR Partners",
+      name: "Durrie Vision",
       location: "Kansas City, MO, USA", 
       description: "Advanced ophthalmology practice specializing in refractive surgery and comprehensive eye care.",
-      contact: "Dr. Dan Durrie, MD - Board Member"
+      contact: "Dr. Dan Durrie, MD - Board Member",
+      logo: "/images/content/DurrieVision.png"
     },
     {
       name: "Alexandria University",
       location: "Cairo, Egypt",
       description: "Academic medical institution advancing eye care research and education in the Middle East.",
-      contact: "Dr. Osama Ibrahim, MD - Board Member"
+      contact: "Dr. Osama Ibrahim, MD - Board Member",
+      logo: "/images/content/AlexandriaUniv.jpeg"
     },
     {
       name: "Institute Zaldivar",
       location: "Mendoza, Argentina",
       description: "Premier ophthalmology institute serving Latin America with cutting-edge vision correction procedures.",
-      contact: "Dr. Roger Zaldivar, MD - Board Member"
+      contact: "Dr. Roger Zaldivar, MD - Board Member",
+      logo: "/images/content/ZaldivarInstitute.svg"
     },
     {
-      name: "Tylock-George",
+      name: "Tylock George",
       location: "Dallas, TX, USA",
       description: "Comprehensive eye care practice committed to advancing vision health through innovative treatments.",
-      contact: "Dr. Taj Nasser, MD - Board Member"
+      contact: "Dr. Taj Nasser, MD - Board Member",
+      logo: "/images/content/TylockGeorge.jpeg"
+    },
+    {
+      name: "Kugler Vision",
+      location: "Omaha, NE, USA",
+      description: "Advanced refractive surgery center specializing in LASIK, cataract surgery, and vision correction procedures.",
+      contact: "Dr. Lance Kugler, MD",
+      logo: "/images/content/kugler-vision.svg"
+    }
+  ]
+
+  const organizations = [
+    {
+      name: "World Congress of Refractive Surgery and Visual Sciences",
+      location: "Global",
+      description: "Premier international conference bringing together leading refractive surgeons and researchers to advance the field of vision correction.",
+      contact: "International Organization",
+      logo: "/images/content/WorldCongress.png"
+    },
+    {
+      name: "Refractive Surgery Alliance (RSA)",
+      location: "Global",
+      description: "Professional organization dedicated to advancing refractive surgery through education, research, and collaboration among surgeons worldwide.",
+      contact: "Professional Alliance",
+      logo: "/images/content/Refractive-Logo_White.png"
     }
   ]
 
@@ -74,16 +104,57 @@ export default function PartnersPage() {
               </p>
             </div>
 
-            {/* Partners Section */}
+            {/* Medical Partners Section */}
             <div className="mb-20">
-              <h2 className="text-3xl font-semibold text-gray-900 mb-8 text-center">Our Partners</h2>
+              <h2 className="text-3xl font-semibold text-gray-900 mb-8 text-center">Medical Partners</h2>
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                {partners.map((partner, index) => (
+                {medicalPartners.map((partner, index) => (
                   <div key={index} className="bg-white border border-gray-200 rounded-lg p-8 hover:shadow-lg transition-shadow duration-300">
-                    <h3 className="text-2xl font-semibold text-gray-900 mb-2">{partner.name}</h3>
-                    <p className="text-vff-blue font-medium mb-4">{partner.location}</p>
+                    <div className="flex items-center mb-4">
+                      <div className="w-16 h-16 mr-4 flex-shrink-0">
+                        <Image
+                          src={partner.logo}
+                          alt={`${partner.name} logo`}
+                          width={64}
+                          height={64}
+                          className="w-full h-full object-contain"
+                        />
+                      </div>
+                      <div>
+                        <h3 className="text-2xl font-semibold text-gray-900 mb-1">{partner.name}</h3>
+                        <p className="text-vff-blue font-medium">{partner.location}</p>
+                      </div>
+                    </div>
                     <p className="text-gray-700 leading-relaxed mb-4">{partner.description}</p>
                     <p className="text-sm text-gray-600 font-medium">{partner.contact}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Organizations Section */}
+            <div className="mb-20">
+              <h2 className="text-3xl font-semibold text-gray-900 mb-8 text-center">Partner Organizations</h2>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                {organizations.map((org, index) => (
+                  <div key={index} className="bg-white border border-gray-200 rounded-lg p-8 hover:shadow-lg transition-shadow duration-300">
+                    <div className="flex items-center mb-4">
+                      <div className="w-16 h-16 mr-4 flex-shrink-0">
+                        <Image
+                          src={org.logo}
+                          alt={`${org.name} logo`}
+                          width={64}
+                          height={64}
+                          className="w-full h-full object-contain"
+                        />
+                      </div>
+                      <div>
+                        <h3 className="text-2xl font-semibold text-gray-900 mb-1">{org.name}</h3>
+                        <p className="text-vff-blue font-medium">{org.location}</p>
+                      </div>
+                    </div>
+                    <p className="text-gray-700 leading-relaxed mb-4">{org.description}</p>
+                    <p className="text-sm text-gray-600 font-medium">{org.contact}</p>
                   </div>
                 ))}
               </div>
@@ -144,12 +215,20 @@ export default function PartnersPage() {
                 Together, we can create a world where no one is held back by visual impairments. Join our global community of partners working to transform lives through vision care.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-vff-blue hover:bg-gray-100 font-bold py-3 px-8 rounded-lg transition-colors">
+                <a 
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSfOdwDOD397b64vCNtmbR6iAuQiqC1yYLnca1YIZdnIUyU4wg/viewform?usp=sharing&ouid=101040064194418031486"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-white text-vff-blue hover:bg-gray-100 font-bold py-3 px-8 rounded-lg transition-colors inline-block text-center"
+                >
                   Become a Partner
-                </button>
-                <button className="border-2 border-white text-white hover:bg-white hover:text-vff-blue font-bold py-3 px-8 rounded-lg transition-colors">
+                </a>
+                <a 
+                  href="/contact-us"
+                  className="border-2 border-white text-white hover:bg-white hover:text-vff-blue font-bold py-3 px-8 rounded-lg transition-colors inline-block text-center"
+                >
                   Contact Us
-                </button>
+                </a>
               </div>
             </div>
           </div>
