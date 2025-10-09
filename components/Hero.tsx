@@ -86,8 +86,8 @@ export default function Hero() {
         <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-2 sm:mb-3">WITH THE</h2>
         <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-4 sm:mb-6">GIFT OF SIGHT.</h3>
         <p className="text-sm sm:text-base md:text-lg mb-4 sm:mb-6 leading-relaxed">
-          Born without arms, Jessica Cox has flown planes and inspired millions — but glasses held her back.
-          After LASIK, she gained the freedom of clear vision without limits.
+          Born without arms, Jessica Cox has flown planes and inspired millions — but how to put on glasses or contacts without hands?
+          After corrective eye surgery, Jessica gained the freedom of clear vision without limits.
         </p>
         <div className="flex justify-end">
           <Link href="/about-us" className="border-2 border-white text-white px-4 sm:px-6 lg:px-8 py-2 sm:py-3 text-sm sm:text-base lg:text-lg font-medium hover:bg-white hover:text-black transition-all duration-300">

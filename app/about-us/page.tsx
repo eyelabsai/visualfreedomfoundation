@@ -38,7 +38,7 @@ export default function AboutPage() {
 
               <div className="bg-vff-blue text-white rounded-lg p-8">
                 <h2 className="text-2xl font-semibold mb-4">In the Press</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   <div>
                     <h4 className="font-semibold mb-2">Focus on Independence</h4>
                     <p className="text-blue-100">
@@ -66,6 +66,21 @@ export default function AboutPage() {
                       className="inline-block mt-2 text-white hover:text-blue-200 underline"
                     >
                       Read Article
+                    </a>
+                  </div>
+                  
+                  <div>
+                    <h4 className="font-semibold mb-2">Wear The Gown: A Focus On Independence</h4>
+                    <p className="text-blue-100">
+                      KENS5 feature highlighting our commitment to independence through vision correction.
+                    </p>
+                    <a 
+                      href="https://www.kens5.com/video/news/local/outreach/wear-the-gown/wear-the-gown-a-focus-on-independence/273-6d831214-a5f3-4883-add3-1cec2f1453c7" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-block mt-2 text-white hover:text-blue-200 underline"
+                    >
+                      Watch Video
                     </a>
                   </div>
                 </div>
