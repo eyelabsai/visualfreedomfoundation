@@ -55,7 +55,7 @@ export default function Header() {
           <div className="flex items-center flex-shrink-0">
             <Link href="/" className="flex items-center space-x-3">
               <Image 
-                src="/images/content/VFF Logo_4c Hor_Blu_OS.jpg" 
+                src="/images/content/VFF loog_background-removed.png" 
                 alt="Visual Freedom Foundation Logo" 
                 width={250} 
                 height={75}

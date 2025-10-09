@@ -28,7 +28,7 @@ export default function Hero() {
 
           <div className="space-y-2 mb-4">
             <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSfOdwDOD397b64vCNtmbR6iAuQiqC1yYLnca1YIZdnIUyU4wg/viewform?usp=sharing&ouid=101040064194418031486"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfj4DLb0N_RHj5vzUP6hjzOt6M8DwMo6djIX1H9SQvnhiv77Q/viewform"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full bg-[#33848C] text-white py-2 px-3 rounded text-xs font-medium hover:bg-[#2a6b72] transition-colors block text-center"
@@ -106,7 +106,7 @@ export default function Hero() {
 
           <div className="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
             <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSfOdwDOD397b64vCNtmbR6iAuQiqC1yYLnca1YIZdnIUyU4wg/viewform?usp=sharing&ouid=101040064194418031486"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfj4DLb0N_RHj5vzUP6hjzOt6M8DwMo6djIX1H9SQvnhiv77Q/viewform"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full bg-[#33848C] text-white py-2 px-3 rounded text-xs font-medium hover:bg-[#2a6b72] transition-colors block text-center"
