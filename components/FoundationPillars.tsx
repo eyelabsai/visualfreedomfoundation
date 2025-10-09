@@ -76,7 +76,7 @@ export default function FoundationPillars() {
       {/* Use the original SVG as background */}
       <div className="relative w-1/2 mx-auto">
         <img 
-          src="/images/content/Foundation.svg" 
+          src="/images/content/VFF_Foundation.v2.jpg" 
           alt="Foundation Pillars" 
           className="w-full h-auto"
         />

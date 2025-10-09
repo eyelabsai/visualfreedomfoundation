@@ -10,42 +10,48 @@ export default function PartnersPage() {
       location: "San Antonio, TX, USA",
       description: "Leading vision correction center providing innovative LASIK and refractive surgery solutions.",
       contact: "Dr. Greg Parkhurst, MD - Board Chairman",
-      logo: "/images/content/logo.svg"
+      logo: "/images/content/logo.svg",
+      website: "https://parkhurstnuvision.com"
     },
     {
       name: "Durrie Vision",
       location: "Kansas City, MO, USA", 
       description: "Advanced ophthalmology practice specializing in refractive surgery and comprehensive eye care.",
       contact: "Dr. Dan Durrie, MD - Board Member",
-      logo: "/images/content/DurrieVision.png"
+      logo: "/images/content/DurrieVision.png",
+      website: "https://durrievision.com"
     },
     {
       name: "Alexandria University",
       location: "Cairo, Egypt",
       description: "Academic medical institution advancing eye care research and education in the Middle East.",
       contact: "Dr. Osama Ibrahim, MD - Board Member",
-      logo: "/images/content/AlexandriaUniv.jpeg"
+      logo: "/images/content/AlexandriaUniv.jpeg",
+      website: "https://alexu.edu.eg"
     },
     {
       name: "Institute Zaldivar",
       location: "Mendoza, Argentina",
       description: "Premier ophthalmology institute serving Latin America with cutting-edge vision correction procedures.",
       contact: "Dr. Roger Zaldivar, MD - Board Member",
-      logo: "/images/content/ZaldivarInstitute.svg"
+      logo: "/images/content/ZaldivarInstitute.svg",
+      website: "https://institutozaldivar.com"
     },
     {
       name: "Tylock George",
       location: "Dallas, TX, USA",
       description: "Comprehensive eye care practice committed to advancing vision health through innovative treatments.",
       contact: "Dr. Taj Nasser, MD - Board Member",
-      logo: "/images/content/TylockGeorge.jpeg"
+      logo: "/images/content/TylockGeorge.jpeg",
+      website: "https://www.tylock.com"
     },
     {
       name: "Kugler Vision",
       location: "Omaha, NE, USA",
       description: "Advanced refractive surgery center specializing in LASIK, cataract surgery, and vision correction procedures.",
       contact: "Dr. Lance Kugler, MD",
-      logo: "/images/content/kugler-vision.svg"
+      logo: "/images/content/kugler-vision.svg",
+      website: "https://kuglervision.com"
     }
   ]
 
@@ -58,11 +64,12 @@ export default function PartnersPage() {
       logo: "/images/content/WorldCongress.png"
     },
     {
-      name: "Refractive Surgery Alliance (RSA)",
+      name: "International Society of Refractive Surgery (ISRS)",
       location: "Global",
-      description: "Professional organization dedicated to advancing refractive surgery through education, research, and collaboration among surgeons worldwide.",
+      description: "A truly global organization representing refractive and cataract surgeons worldwide. Committed to innovation, education and ethics in refractive surgery with exclusive benefits including the Journal of Refractive Surgery, webinars, and clinical resources.",
       contact: "Professional Alliance",
-      logo: "/images/content/Refractive-Logo_White.png"
+      logo: "/images/content/isrs.svg",
+      website: "https://isrs.org"
     }
   ]
 
@@ -109,7 +116,13 @@ export default function PartnersPage() {
               <h2 className="text-3xl font-semibold text-gray-900 mb-8 text-center">Medical Partners</h2>
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 {medicalPartners.map((partner, index) => (
-                  <div key={index} className="bg-white border border-gray-200 rounded-lg p-8 hover:shadow-lg transition-shadow duration-300">
+                  <a 
+                    key={index} 
+                    href={partner.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-white border border-gray-200 rounded-lg p-8 hover:shadow-lg transition-shadow duration-300 cursor-pointer block"
+                  >
                     <div className="flex items-center mb-4">
                       <div className="w-16 h-16 mr-4 flex-shrink-0">
                         <Image
@@ -127,7 +140,7 @@ export default function PartnersPage() {
                     </div>
                     <p className="text-gray-700 leading-relaxed mb-4">{partner.description}</p>
                     <p className="text-sm text-gray-600 font-medium">{partner.contact}</p>
-                  </div>
+                  </a>
                 ))}
               </div>
             </div>
