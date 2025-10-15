@@ -51,9 +51,14 @@ export default function Hero() {
             >
               Patient Application for Free Surgery
             </a>
-            <button className="w-full bg-[#33848C] text-white py-4 px-4 rounded text-lg font-bold hover:bg-[#2a6b72] transition-colors">
+            <a
+              href="https://buy.stripe.com/8x25kFcevb9wfyzfho2go00"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full bg-[#33848C] text-white py-4 px-4 rounded text-lg font-bold hover:bg-[#2a6b72] transition-colors block text-center"
+            >
               DONATE NOW
-            </button>
+            </a>
             <p className="text-center text-xs text-gray-600">$250 = 1 Surgery</p>
           </div>
 
@@ -129,9 +134,14 @@ export default function Hero() {
             >
               Patient Application for Free Surgery
             </a>
-            <button className="w-full bg-[#33848C] text-white py-3 sm:py-4 px-4 rounded text-base sm:text-lg font-bold hover:bg-[#2a6b72] transition-colors">
+            <a
+              href="https://buy.stripe.com/8x25kFcevb9wfyzfho2go00"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full bg-[#33848C] text-white py-3 sm:py-4 px-4 rounded text-base sm:text-lg font-bold hover:bg-[#2a6b72] transition-colors block text-center"
+            >
               DONATE NOW
-            </button>
+            </a>
             <p className="text-center text-xs text-gray-600">$250 = 1 Surgery</p>
           </div>
 

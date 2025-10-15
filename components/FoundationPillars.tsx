@@ -20,7 +20,7 @@ const pillarData: PillarData[] = [
     id: 'eye-to-eye',
     title: 'Eye 2 Eye Initiative',
     description: 'Sponsor a Surgery $250 = One eye surgery. Your contribution can restore someone\'s sight. Donate $250 for every paid refractive surgery done in your office to sponsor a refractive surgery for someone in need. Help us reach more people by displaying our handout in your waiting room.',
-    link: '#',
+    link: 'https://buy.stripe.com/8x25kFcevb9wfyzfho2go00',
     linkText: 'Donate Now'
   },
   {
@@ -155,6 +155,8 @@ export default function FoundationPillars() {
             {getPillarInfo(hoveredPillar)?.link && (
               <a 
                 href={getPillarInfo(hoveredPillar)?.link}
+                target={getPillarInfo(hoveredPillar)?.link?.startsWith('http') ? '_blank' : undefined}
+                rel={getPillarInfo(hoveredPillar)?.link?.startsWith('http') ? 'noopener noreferrer' : undefined}
                 className="inline-block bg-[#33848C] text-white px-3 py-1 rounded text-xs hover:bg-[#2a6b73] transition-colors"
               >
                 {getPillarInfo(hoveredPillar)?.linkText}
