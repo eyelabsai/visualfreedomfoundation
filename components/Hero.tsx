@@ -36,7 +36,7 @@ export default function Hero() {
               Become a Volunteer Ophthalmologist
             </a>
             <a
-              href="https://forms.gle/j9xK9T774Ab7sXw16"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSeGsYDkaGBimgBraMAvd6O3upINRfq63Lowyw8sHpAmITA0Hw/viewform?usp=send_form"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full bg-gray-200 text-gray-800 py-2 px-3 rounded text-xs font-medium hover:bg-gray-300 transition-colors block text-center"
@@ -59,7 +59,6 @@ export default function Hero() {
             >
               DONATE NOW
             </a>
-            <p className="text-center text-xs text-gray-600">$250 = 1 Surgery</p>
           </div>
 
           <div className="grid grid-cols-2 gap-3">
@@ -119,7 +118,7 @@ export default function Hero() {
               Become a Volunteer Ophthalmologist
             </a>
             <a
-              href="https://forms.gle/j9xK9T774Ab7sXw16"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSeGsYDkaGBimgBraMAvd6O3upINRfq63Lowyw8sHpAmITA0Hw/viewform?usp=send_form"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full bg-gray-200 text-gray-800 py-2 px-3 rounded text-xs font-medium hover:bg-gray-300 transition-colors block text-center"
@@ -142,7 +141,6 @@ export default function Hero() {
             >
               DONATE NOW
             </a>
-            <p className="text-center text-xs text-gray-600">$250 = 1 Surgery</p>
           </div>
 
           <div className="grid grid-cols-2 gap-2 sm:gap-3">
