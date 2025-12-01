@@ -9,7 +9,8 @@ import { useAuth } from '@/contexts/AuthContext'
 const ADMIN_EMAILS = [
   'gurpalvirdi@gmail.com',
   'admin@visualfreedomfoundation.org',
-  'info@visualfreedomfoundation.org'
+  'info@visualfreedomfoundation.org',
+  'Suzanne@visual-freedom.org'
 ]
 
 export default function Header() {

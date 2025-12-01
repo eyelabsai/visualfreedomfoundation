@@ -9,7 +9,8 @@ import Footer from '@/components/Footer'
 const ADMIN_EMAILS = [
   'gurpalvirdi@gmail.com', // Replace with your actual admin email
   'admin@visualfreedomfoundation.org', // Add more admin emails as needed
-  'info@visualfreedomfoundation.org'
+  'info@visualfreedomfoundation.org',
+  'Suzanne@visual-freedom.org'
 ]
 
 export default function AdminPage() {

@@ -10,7 +10,8 @@ service cloud.firestore {
         request.auth.token.email in [
           'gurpalvirdi@gmail.com',
           'admin@visualfreedomfoundation.org',
-          'info@visualfreedomfoundation.org'
+          'info@visualfreedomfoundation.org',
+          'Suzanne@visual-freedom.org'
         ];
       
       // Allow public reading of surgeon profiles for the map
@@ -34,7 +35,8 @@ service cloud.firestore {
         request.auth.token.email in [
           'gurpalvirdi@gmail.com',
           'admin@visualfreedomfoundation.org',
-          'info@visualfreedomfoundation.org'
+          'info@visualfreedomfoundation.org',
+          'Suzanne@visual-freedom.org'
         ];
     }
     
