@@ -28,10 +28,10 @@ export default function AboutPage() {
                 </p>
               </div>
 
-              <div className="mb-12">
-                <img 
-                  src="/images/content/aboutusmissionvalueimpact.png" 
-                  alt="Our Mission, Vision, and Impact" 
+              <div className="mb-12 lg:-mx-32 xl:-mx-48">
+                <img
+                  src="/images/content/aboutusmissionvalueimpact.png"
+                  alt="Our Mission, Vision, and Impact"
                   className="w-full h-auto rounded-lg shadow-lg"
                 />
               </div>

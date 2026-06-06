@@ -55,12 +55,13 @@ export default function Header() {
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center flex-shrink-0">
             <Link href="/" className="flex items-center space-x-3">
-              <Image 
-                src="/images/content/VFF loog_background-removed.png" 
-                alt="Visual Freedom Foundation Logo" 
-                width={250} 
-                height={75}
-                className="h-16 w-auto"
+              <Image
+                src="/images/content/VFF loog_background-removed.png"
+                alt="Visual Freedom Foundation Logo"
+                width={360}
+                height={108}
+                className="h-20 lg:h-24 w-auto"
+                priority
               />
             </Link>
           </div>
@@ -97,6 +98,14 @@ export default function Header() {
           </button>
           
           <div className="flex items-center space-x-4 ml-8">
+            <a
+              href="https://buy.stripe.com/8x25kFcevb9wfyzfho2go00"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden sm:inline-block bg-[#33848C] text-white hover:bg-[#2a6b72] px-4 py-2 rounded font-bold whitespace-nowrap transition-colors"
+            >
+              DONATE
+            </a>
             {loading ? (
               // Show loading state
               <div className="text-white/80">Loading...</div>
@@ -182,13 +191,22 @@ export default function Header() {
               >
                 OUR PARTNERS
               </Link>
-              <Link 
-                href="/contact-us" 
+              <Link
+                href="/contact-us"
                 className="text-white hover:text-[#87CEEB] transition-colors font-medium px-4 py-2 hover:bg-white/20 rounded-md"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 CONTACT US
               </Link>
+              <a
+                href="https://buy.stripe.com/8x25kFcevb9wfyzfho2go00"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#33848C] text-white hover:bg-[#2a6b72] transition-colors font-bold px-4 py-2 rounded-md text-center mx-4"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                DONATE
+              </a>
             </nav>
           </div>
         )}
